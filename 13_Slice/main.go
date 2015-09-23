@@ -4,23 +4,16 @@ import (
 	"fmt"
 )
 
+func printer(str ...string){  // Creating a function to loop through strings
+	for k, v := range str{
+		fmt.Println(k,v)
+	}
+}
+
 func main() {
-	s := []string{
-		"MikeyRobby",
-		"Todd",
-		"Go",
-		"Fresno",
-		"City",
-		"College",
-	}
 
-	for i, value := range s {
-		fmt.Println(i, " - ", value)
-	}
+	mySlice := []string{"MikeyRobby","Todd","Daniel", "Rio", } // A slice of names
+	fmt.Println(mySlice) // Prints out the slice
 
-	mySlice := []int{2,4,6,8,10,9,7,5,3,1,}
-
-	for i, value := range mySlice {
-		fmt.Println(i, value)
-	}
+	printer(mySlice...) // Loops through mySlice and prints out the index and the value
 }
